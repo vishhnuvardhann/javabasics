@@ -4,13 +4,11 @@ public class UC7 {
         private char character;
         private String[] pattern;
 
-        // Constructor
         public CharacterPatternMap(char character, String[] pattern) {
             this.character = character;
             this.pattern = pattern;
         }
 
-        // Getter for character
         public char getCharacter() {
             return character;
         }
@@ -21,7 +19,6 @@ public class UC7 {
         }
     }
 
-    // Create array of CharacterPatternMap objects
     public static CharacterPatternMap[] createCharacterPatternMaps() {
 
         return new CharacterPatternMap[]{
@@ -58,7 +55,6 @@ public class UC7 {
         };
     }
 
-    // Retrieve pattern for given character
     public static String[] getCharacterPattern(char ch,
                                                CharacterPatternMap[] maps) {
 
@@ -67,10 +63,9 @@ public class UC7 {
                 return map.getPattern();
             }
         }
-        return new String[7];  // fallback
+        return new String[7]; 
     }
 
-    // Print banner
     public static void printMessage(String message,
                                     CharacterPatternMap[] maps) {
 
@@ -87,7 +82,6 @@ public class UC7 {
         }
     }
 
-    // Main method
     public static void main(String[] args) {
 
         CharacterPatternMap[] maps = createCharacterPatternMaps();
